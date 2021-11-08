@@ -51,13 +51,8 @@ android {
         )
     }
 
-    signingConfigs {
-        register("release") {
-            keyAlias = "upload"
-            keyPassword = System.getenv("KEYSTORE_PASSPHRASE")
-            storeFile = file("../owntracks.release.keystore.jks")
-            storePassword = System.getenv("KEYSTORE_PASSPHRASE")
-        }
+    lintOptions {
+        isAbortOnError = false
     }
 
     buildTypes {
