@@ -51,10 +51,6 @@ android {
         )
     }
 
-    lintOptions {
-        isAbortOnError = false
-    }
-
     buildTypes {
 
         named("release") {
@@ -105,17 +101,7 @@ android {
     }
 
     lintOptions {
-        baselineFile = file("../../lint/lint-baseline.xml")
-        isCheckAllWarnings = true
-        isWarningsAsErrors = false
         isAbortOnError = false
-        disable(
-            "TypographyFractions",
-            "TypographyQuotes",
-            "Typos",
-            "UnsafeExperimentalUsageError",
-            "UnsafeExperimentalUsageWarning"
-        )
     }
     testOptions {
         animationsDisabled = true
